@@ -18,7 +18,8 @@ body {
     line-height: 120px;
 }
 
-.logo img {
+.logo #animatedLogo {
+  display: inline-block;
   vertical-align: middle;
   width: 120px;
   height: 120px;
@@ -74,7 +75,7 @@ div.info {
     line-height: 100px;
   }
 
-  .logo img {
+  .logo #animatedLogo {
     vertical-align: middle;
     width: 100px;
     height: 100px;
@@ -100,7 +101,7 @@ div.info {
     line-height: 60px;
   }
 
-  .logo img {
+  .logo #animatedLogo {
     vertical-align: middle;
     width: 60px;
     height: 60px;
