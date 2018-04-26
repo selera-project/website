@@ -82,6 +82,20 @@ ready(function(){
     lineGroup.add(line4);
     lineGroup.translation.set(two.width / 2, two.height / 2);
 
+    for (var _ = 0; i < 10; i++) {
+      var j = Math.random(12);
+      var i = Math.random(12);
+      while (Math.abs(i-j) < 2) {
+        var j = Math.random(12);
+        var i = Math.random(12);
+      }
+      line = two.makeLine(xs[i], ys[i], xs[j], ys[j]);
+      line.linewidth = 1;
+      line.opacity = Math.random()*Math.abs(i-j)*0.1;
+      line.stroke = style.lineColor;
+      group.add(line);
+    }
+
     function f() {
       if (counter % 12 == 0) {
         var xs = []
