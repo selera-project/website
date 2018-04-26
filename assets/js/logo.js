@@ -107,7 +107,7 @@ ready(function(){
         for (var i = 0; i < 12; i++) {
           for (var j = i; j < 12; j++) {
             var p = Math.random();
-            if (p < 0.004 && Math.abs(i-j) > 2) {
+            if (p < 0.007 && Math.abs(i-j) > 2) {
               line = two.makeLine(xs[i], ys[i], xs[j], ys[j]);
               line.linewidth = 1;
               line.opacity = Math.random()*Math.abs(i-j)*0.1;

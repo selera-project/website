@@ -10,7 +10,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-top: 30vh;
-    margin-left: auto;
     margin-right: auto;
     padding: 10px;
     width: auto;
@@ -30,7 +29,8 @@ body {
   display: inline-block;
   text-transform: uppercase;
   vertical-align: middle;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.8vw;
+  margin-left: 1vw;
   margin-top: -5px;
   color: #FFA644;
   font-size: 120px;
