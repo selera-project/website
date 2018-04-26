@@ -46,9 +46,9 @@ ready(function(){
     var xs = []
     var ys = []
     var bigCircleGroup = two.makeGroup(bigCircle);
-    for (var i = 0; i < 16; i++) {
-      var x = (r-3.7) * Math.cos(2 * Math.PI * i / 16);
-      var y = (r-3.7) * Math.sin(2 * Math.PI * i / 16);
+    for (var i = 0; i < 12; i++) {
+      var x = (r-2) * Math.cos(2 * Math.PI * i / 12);
+      var y = (r-2) * Math.sin(2 * Math.PI * i / 12);
       xs.push(x);
       ys.push(y);
     }
@@ -61,36 +61,36 @@ ready(function(){
 
     var counter = 0;
 
-    line1 = two.makeLine(xs[4], ys[4], xs[12], ys[12]);
+    line1 = two.makeLine(xs[3], ys[3], xs[9], ys[9]);
     line1.linewidth = style.lineWidth;
     line1.stroke = style.lineColor;
     lineGroup.add(line1);
 
-    line2 = two.makeLine(xs[0], ys[0], xs[6], ys[6]);
+    line2 = two.makeLine(xs[0], ys[0], xs[4], ys[4]);
     line2.linewidth = style.lineWidth;
     line2.stroke = style.lineColor;
     lineGroup.add(line2);
 
-    line3 = two.makeLine(xs[8], ys[8], xs[14], ys[14]);
+    line3 = two.makeLine(xs[10], ys[10], xs[6], ys[6]);
     line3.linewidth = style.lineWidth;
     line3.stroke = style.lineColor;
     lineGroup.add(line3);
 
-    line4 = two.makeLine(xs[0], ys[0], xs[8], ys[8]);
+    line4 = two.makeLine(xs[0], ys[0], xs[6], ys[6]);
     line4.linewidth = style.lineWidth;
     line4.stroke = style.lineColor;
     lineGroup.add(line4);
     lineGroup.translation.set(two.width / 2, two.height / 2);
 
     function f() {
-      if (counter % 15 == 0) {
+      if (counter % 12 == 0) {
         var xs = []
         var ys = []
         var dict = {};
-        for (var i = 0; i < 16; i++) {
+        for (var i = 0; i < 12; i++) {
           if (true) {
-            var x = (r-3.7) * Math.cos(2 * Math.PI * (i) / 16);
-            var y = (r-3.7) * Math.sin(2 * Math.PI * (i) / 16);
+            var x = (r-2) * Math.cos(2 * Math.PI * (i) / 12);
+            var y = (r-2) * Math.sin(2 * Math.PI * (i) / 12);
             xs.push(x);
             ys.push(y);
           }
@@ -104,8 +104,8 @@ ready(function(){
           }
         }
 
-        for (var i = 0; i < 16; i++) {
-          for (var j = i; j < 16; j++) {
+        for (var i = 0; i < 12; i++) {
+          for (var j = i; j < 12; j++) {
             var p = Math.random();
             if (p < 0.004 && Math.abs(i-j) > 2) {
               line = two.makeLine(xs[i], ys[i], xs[j], ys[j]);
@@ -118,11 +118,11 @@ ready(function(){
           }
         }
         group.translation.set(two.width / 2, two.height / 2);
-        for (var i = 0; i < 16; i++) {
+        for (var i = 0; i < 12; i++) {
           var circle = two.makeCircle(xs[i], ys[i], style.smallCircleRadius);
           circle.fill = '#FFFFFF';
           circle.stroke = style.lineColor;
-          circle.linewidth = style.lineWidth/2;
+          circle.linewidth = style.lineWidth/3;
           circleGroup.add(circle);
           circles.push(circle);
         }
