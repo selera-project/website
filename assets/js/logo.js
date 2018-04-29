@@ -82,16 +82,16 @@ ready(function(){
     lineGroup.add(line4);
     lineGroup.translation.set(two.width / 2, two.height / 2);
 
-    for (var _ = 0; _ < 10; _++) {
-      var j = Math.random(12);
-      var i = Math.random(12);
+    for (t = 0; t < 10; t++) {
+      var j = Math.floor(Math.random() * 12);
+      var i = Math.floor(Math.random() * 12);
       while (Math.abs(i-j) < 2) {
-        var j = Math.random(12);
-        var i = Math.random(12);
+        var j = Math.floor(Math.random() * 12);
+        var i = Math.floor(Math.random() * 12);
       }
       line = two.makeLine(xs[i], ys[i], xs[j], ys[j]);
       line.linewidth = 1;
-      line.opacity = Math.random()*Math.abs(i-j)*0.1;
+      line.opacity = Math.random()*Math.abs(i-j)*0.15;
       line.stroke = style.lineColor;
       group.add(line);
     }
