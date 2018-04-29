@@ -82,7 +82,7 @@ ready(function(){
     lineGroup.add(line4);
     lineGroup.translation.set(two.width / 2, two.height / 2);
 
-    for (var _ = 0; i < 10; i++) {
+    for (var _ = 0; _ < 10; _++) {
       var j = Math.random(12);
       var i = Math.random(12);
       while (Math.abs(i-j) < 2) {
